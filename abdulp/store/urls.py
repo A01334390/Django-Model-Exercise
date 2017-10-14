@@ -19,9 +19,9 @@ from .views import (
 )
 
 urlpatterns = [
-    url(r'^$', ClientList.as_view(), name='list'),
-    url(r'^(?P<pk>\d+)$', ClientDetail.as_view(), name='detail'),
-    url(r'^nuevo$', ClientCreation.as_view(), name='new'),
-    url(r'^editar/(?P<pk>\d+)$', ClientUpdate.as_view(), name='edit'),
-    url(r'^borrar/(?P<pk>\d+)$', ClientDelete.as_view(), name='delete'),
+    url(r'^client/list/$', ClientList.as_view(), name='client_list'),
+    url(r'^client/detail/(?P<pk>\d+)$', ClientDetail.as_view(), name='client_detail'),
+    url(r'^client/new/$', ClientCreation.as_view(), name='client_new'),
+    url(r'^client/edit/(?P<pk>\d+)$', ClientUpdate.as_view(), name='client_edit'),
+    url(r'^client/delete/(?P<pk>\d+)$', ClientDelete.as_view(), name='client_delete'),
 ]

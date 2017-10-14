@@ -42,7 +42,7 @@ class NotebookCreation(CreateView):
 
 class ClientCreation(CreateView):
     model = Client
-    success_url = reverse_lazy('client:list')
+    success_url = reverse_lazy('client_list')
     fields = ['firstName','secondName','address','isPhysical','email']
 
 #class OrderCreation(CreateView):
@@ -61,7 +61,7 @@ class NotebookUpdate(UpdateView):
 
 class ClientUpdate(UpdateView):
     model = Client
-    success_url = reverse_lazy('client:list')
+    success_url = reverse_lazy('client_list')
     fields = ['firstName','secondName','address','isPhysical','email']
 
 #class OrderCreation(CreateView):
@@ -79,7 +79,7 @@ class NotebookDelete(DeleteView):
 
 class ClientDelete(DeleteView):
     model = Client
-    success_url = reverse_lazy('client:list')
+    success_url = reverse_lazy('client_list')
 
 class PageDelete(DeleteView):
     model = Page

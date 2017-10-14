@@ -3,7 +3,7 @@
 <h1>Clientes</h1>
 
 <p>
-    <a href="{% url "client:new" %}">Agregar Clientes</a>
+    <a href="{% url "client_new" %}">Agregar Clientes</a>
 </p>
 
 <ul>
@@ -11,9 +11,9 @@
         <li>
             <p>{{ client.firstName }}</p>
             <p>
-                <a href="{% url "client:detail" client.id %}">Ver</a> | 
-                <a href="{% url "client:edit" client.id %}">Editar</a> | 
-                <a href="{% url "client:delete" client.id %}">Borrar</a> 
+                <a href="{% url "client_detail" client.id %}">Ver</a> | 
+                <a href="{% url "client_edit" client.id %}">Editar</a> | 
+                <a href="{% url "client_delete" client.id %}">Borrar</a> 
             </p>
         </li>
     {% endfor %}
