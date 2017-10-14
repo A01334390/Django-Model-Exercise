@@ -1,0 +1,11 @@
+<h1>{{ client.firstName }}</h1>
+
+<p>Primer Nombre: <i>{{ client.firstName }}</i></p>
+<p>Segundo Nombre: <i>{{ client.secondName }}</i></p>
+<p>Direccion: <i>{{ client.address }}</i></p>
+<p>Es cliente fisico?: <i>{{ client.isPhysical }}</i></p>
+<p>email: <i>{{ client.email }}</i></p>
+
+<p>
+    <a href="{% url "client:list" %}">Regresar</a>
+</p>

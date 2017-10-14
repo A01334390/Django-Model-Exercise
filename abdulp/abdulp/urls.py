@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
+    url(r'^store/',include('store.urls',namespace='client')),
     url(r'^plurals/',include('plural.urls',namespace='plural')),
     url(r'^admin/', admin.site.urls),
 ]
