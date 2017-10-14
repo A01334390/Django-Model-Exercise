@@ -49,7 +49,7 @@ class ClientCreation(CreateView):
 #    model = 
 
 class PageCreation(CreateView):
-    model = Page,
+    model = Page
     success_url = reverse_lazy('page_list')
     fields = ['description','cost']
 
@@ -68,7 +68,7 @@ class ClientUpdate(UpdateView):
 #    model = 
 
 class PageUpdate(UpdateView):
-    model = Page,
+    model = Page
     success_url = reverse_lazy('page_list')
     fields = ['description','cost']
 

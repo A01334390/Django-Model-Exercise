@@ -35,7 +35,7 @@ class Order(models.Model):
 
 class Page(models.Model):
     description = models.CharField(max_length=40)
-    cost = models.PositiveSmallIntegerField()
+    cost = models.IntegerField()
     
 class Notebook(models.Model):
     nType = models.CharField(
