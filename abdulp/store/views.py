@@ -28,9 +28,6 @@ class NotebookList(ListView):
 class ClientList(ListView):
     model = Client
 
-#class OrderList(ListView):
-#    model = Order
-
 class PageList(ListView):
     model = Page
 
@@ -44,9 +41,6 @@ class ClientCreation(CreateView):
     model = Client
     success_url = reverse_lazy('client_list')
     fields = ['firstName','secondName','address','isPhysical','email']
-
-#class OrderCreation(CreateView):
-#    model = 
 
 class PageCreation(CreateView):
     model = Page
@@ -63,9 +57,6 @@ class ClientUpdate(UpdateView):
     model = Client
     success_url = reverse_lazy('client_list')
     fields = ['firstName','secondName','address','isPhysical','email']
-
-#class OrderCreation(CreateView):
-#    model = 
 
 class PageUpdate(UpdateView):
     model = Page
