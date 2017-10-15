@@ -3,7 +3,8 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 
-from django.views.generic import ListView
+from django.http import HttpResponse
+from django.views.generic import ListView, TemplateView
 from django.views.generic.detail import DetailView
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic.edit import (
@@ -20,6 +21,9 @@ from .models import (
 )
 
 # Create your views here.
+class HomePageView(TemplateView):
+    def get(self,request,**kwargs):
+        return render(request,'index.html',context=None)
 
 # //////// Listing of models ////////
 class NotebookList(ListView):

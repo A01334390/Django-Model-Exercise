@@ -26,9 +26,12 @@ from .views import (
     NotebookOrderDetail,
     NotebookOrderList,
     NotebookOrderUpdate,
+    HomePageView,
 )
 
 urlpatterns = [
+    #View for the homepage
+    url(r'^$',HomePageView.as_view()),
     #Views for clients
     url(r'^client/list/$', ClientList.as_view(), name='client_list'),
     url(r'^client/detail/(?P<pk>\d+)$', ClientDetail.as_view(), name='client_detail'),
