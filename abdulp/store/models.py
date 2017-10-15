@@ -21,6 +21,9 @@ class Client(models.Model):
         unique = True
     )
 
+    def __unicode__(self):
+        return self.firstName
+
 class Order(models.Model):
     date = models.DateField()
     PRIORITY = (
@@ -37,16 +40,22 @@ class Order(models.Model):
         Client,
         on_delete=models.CASCADE
     )
+    def __unicode__(self):
+        return str(self.id)
 
 class Page(models.Model):
     description = models.CharField(max_length=40)
     cost = models.IntegerField()
+    def __unicode__(self):
+        return self.description
     
 class Notebook(models.Model):
     nType = models.CharField(
         max_length = 50
     )
     benefit = models.IntegerField()
+    def __unicode__(self):
+        return self.nType
 
 class NotebookOrder(models.Model):
     order = models.ForeignKey(
