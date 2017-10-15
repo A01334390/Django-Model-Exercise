@@ -10,8 +10,15 @@ This is a small POC of the Django Technology to test if Python would suit the Bl
   <li>A better design</li>
   <li><b>Not</b> to be in Python</li>
 </ul>
-
-Made by
+<br>
+<h2>Technologies used: </h2>
+<ul>
+  <li>Django (Python)</li>
+  <li>Bootstrap (UI Framework)</li>
+  <li>Gunicorn (Web Server)</li>
+  <li>Docker</li>
+  </ul>
+<h2>Made by</h2>
 <ul>
   <li>
     Enrique Navarro Torres-Arpi
