@@ -15,7 +15,12 @@ from .views import (
     PageDelete,
     PageList,
     PageUpdate,
-    PageDetail
+    PageDetail,
+    OrderCreation,
+    OrderDelete,
+    OrderDetail,
+    OrderList,
+    OrderUpdate,
 )
 
 urlpatterns = [
@@ -39,4 +44,11 @@ urlpatterns = [
     url(r'^page/new/$', PageCreation.as_view(), name='page_new'),
     url(r'^page/edit/(?P<pk>\d+)$', PageUpdate.as_view(), name='page_edit'),
     url(r'^page/delete/(?P<pk>\d+)$', PageDelete.as_view(), name='page_delete'),
+
+    #Views for Orders
+    url(r'^order/list/$', OrderList.as_view(), name='order_list'),
+    url(r'^order/detail/(?P<pk>\d+)$', OrderDetail.as_view(), name='order_detail'),
+    url(r'^order/new/$', OrderCreation.as_view(), name='order_new'),
+    url(r'^order/edit/(?P<pk>\d+)$', OrderUpdate.as_view(), name='order_edit'),
+    url(r'^order/delete/(?P<pk>\d+)$', OrderDelete.as_view(), name='order_delete'),
 ]

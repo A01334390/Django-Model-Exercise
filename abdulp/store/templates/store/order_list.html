@@ -1,0 +1,22 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{%bootstrap_javascript%}
+
+<h1>order types</h1>
+
+<p>
+    <a href="{% url "order_new" %}">Add orders</a>
+</p>
+
+<ul>
+    {% for order in object_list %}
+        <li>
+            <p>{{ order.client }}</p>
+            <p>
+                <a href="{% url "order_detail" order.id %}">Ver</a> | 
+                <a href="{% url "order_edit" order.id %}">Editar</a> | 
+                <a href="{% url "order_delete" order.id %}">Borrar</a> 
+            </p>
+        </li>
+    {% endfor %}
+</ul>

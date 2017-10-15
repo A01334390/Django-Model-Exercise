@@ -31,7 +31,15 @@ class ClientList(ListView):
 class PageList(ListView):
     model = Page
 
+class OrderList(ListView):
+    model = Order
+
 # //////// Creation of models ///////////
+class OrderCreation(CreateView):
+    model = Order
+    success_url = reverse_lazy('order_list')
+    fields = ['date','priority','client']
+
 class NotebookCreation(CreateView):
     model = Notebook
     success_url = reverse_lazy('notebook_list')
@@ -48,6 +56,11 @@ class PageCreation(CreateView):
     fields = ['description','cost']
 
 # ////////// Update Viws ///////////
+class OrderUpdate(UpdateView):
+    model = Order
+    success_url = reverse_lazy('order_list')
+    fields = ['date','priority','client']
+
 class NotebookUpdate(UpdateView):
     model = Notebook
     success_url = reverse_lazy('notebook_list')
@@ -64,6 +77,10 @@ class PageUpdate(UpdateView):
     fields = ['description','cost']
 
 # //////// Delete View //////////
+class OrderDelete(DeleteView):
+    model = Order
+    success_url = reverse_lazy('order_list')
+
 class NotebookDelete(DeleteView):
     model = Notebook
     success_url = reverse_lazy('notebook_list')
@@ -77,6 +94,9 @@ class PageDelete(DeleteView):
     success_url = reverse_lazy('page_list')
 
 # //////// Detailed View /////////
+class OrderDetail(DetailView):
+    model = Order
+
 class ClientDetail(DetailView):
     model = Client
 

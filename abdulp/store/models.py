@@ -23,10 +23,15 @@ class Client(models.Model):
 
 class Order(models.Model):
     date = models.DateField()
-    priority = (
-        'High',
-        'Normal',
-        'Low'
+    PRIORITY = (
+        ('H','High'),
+        ('N','Normal'),
+        ('L','Low')
+    )
+    priority = models.CharField(
+        choices = PRIORITY,
+        max_length = 1,
+        default = 'L',
     )
     client = models.ForeignKey(
         Client,
@@ -47,19 +52,23 @@ class NotebookOrder(models.Model):
     order = models.ForeignKey(
         Order,
         on_delete=models.CASCADE,
-        primary_key = True
     )
     quantity = models.PositiveIntegerField()
     notebook = models.ForeignKey(
         Notebook,
         on_delete=models.DO_NOTHING
     )
-    status = (
-        "Not Started",
-        "Preparing...",
-        "Done",
-        "Shipping...",
-        "Shipped"
+    STATUS = (
+        ("NS","Not Started"),
+        ("PP","Preparing..."),
+        ("DO","Done"),
+        ("SH","Shipping..."),
+        ("SD","Shipped")
+    )
+    status = models.CharField(
+        choices = STATUS,
+        max_length = 2,
+        default = "NS",
     )
     page = models.OneToOneField(
         Page,
