@@ -2,9 +2,9 @@
 {% bootstrap_css %}
 {%bootstrap_javascript%}
 
-<h1>{{ order.client }}</h1>
+<h1>{{ order.client.firstName }}</h1>
 
-<p>Client: <i>{{ order.client }}</i></p>
+<p>Client: <i>{{ order.client.firstName }}</i></p>
 <p>Priority: <i>{{order.priority}}</i></p>
 <p>Date: <i>{{order.date}}</i></p>
 

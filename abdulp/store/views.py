@@ -32,10 +32,12 @@ class PageList(ListView):
     model = Page
 
 class OrderList(ListView):
-    model = Order
+   context_object_name = 'order'
+   queryset = Order.objects.all().prefetch_related('client')
 
 class NotebookOrderList(ListView):
-    model = NotebookOrder
+    context_object_name = 'notebookorder'
+    queryset = NotebookOrder.objects.all().prefetch_related('order','notebook','page')
 
 # //////// Creation of models ///////////
 class NotebookOrderCreation(CreateView):
@@ -112,10 +114,12 @@ class PageDelete(DeleteView):
 
 # //////// Detailed View /////////
 class NotebookOrderDetail(DetailView):
-    model = NotebookOrder
+    context_object_name = 'notebookorder'
+    queryset = NotebookOrder.objects.all().prefetch_related('order','notebook','page')
 
 class OrderDetail(DetailView):
-    model = Order
+    context_object_name = 'order'
+    queryset = Order.objects.all().prefetch_related('client')
 
 class ClientDetail(DetailView):
     model = Client

@@ -2,13 +2,13 @@
 {% bootstrap_css %}
 {%bootstrap_javascript%}
 
-<h1>{{ notebookorder.client }}</h1>
+<h1>{{ notebookorder.order.client.firstName }}</h1>
 
-<p>Order: <i>{{ notebookorder.order }}</i></p>
+<p>Priority: <i>{{ notebookorder.order.priority }}</i></p>
 <p>Quantity: <i>{{notebookorder.quantity}}</i></p>
-<p>Notebook: <i>{{notebookorder.notebook}}</i></p>
+<p>Notebook: <i>{{notebookorder.notebook.nType}}</i></p>
 <p>Status: <i>{{notebookorder.status}}</i></p>
-<p>Page: <i>{{notebookorder.page}}</i></p>
+<p>Page: <i>{{notebookorder.page.description}}</i></p>
 
 
 <p>
