@@ -21,6 +21,11 @@ from .views import (
     OrderDetail,
     OrderList,
     OrderUpdate,
+    NotebookOrderCreation,
+    NotebookOrderDelete,
+    NotebookOrderDetail,
+    NotebookOrderList,
+    NotebookOrderUpdate,
 )
 
 urlpatterns = [
@@ -51,4 +56,11 @@ urlpatterns = [
     url(r'^order/new/$', OrderCreation.as_view(), name='order_new'),
     url(r'^order/edit/(?P<pk>\d+)$', OrderUpdate.as_view(), name='order_edit'),
     url(r'^order/delete/(?P<pk>\d+)$', OrderDelete.as_view(), name='order_delete'),
+
+    #Views for Order Notebooks
+    url(r'^notebookorder/list/$', NotebookOrderList.as_view(), name='notebookorder_list'),
+    url(r'^notebookorder/detail/(?P<pk>\d+)$', NotebookOrderDetail.as_view(), name='notebookorder_detail'),
+    url(r'^notebookorder/new/$', NotebookOrderCreation.as_view(), name='notebookorder_new'),
+    url(r'^notebookorder/edit/(?P<pk>\d+)$', NotebookOrderUpdate.as_view(), name='notebookorder_edit'),
+    url(r'^notebookorder/delete/(?P<pk>\d+)$', NotebookOrderDelete.as_view(), name='notebookorder_delete'),
 ]
