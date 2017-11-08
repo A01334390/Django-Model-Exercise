@@ -1,0 +1,8 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{%bootstrap_javascript%}
+
+<form method="post">{% csrf_token %}
+    ¿Estás seguro que deseas borrar el Cuaderno "{{ object }}"?
+    <input type="submit" value="Submit" />
+</form>

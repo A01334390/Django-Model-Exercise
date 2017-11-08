@@ -1,0 +1,13 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{%bootstrap_javascript%}
+
+<h1>{{ order.client.firstName }}</h1>
+
+<p>Client: <i>{{ order.client.firstName }}</i></p>
+<p>Priority: <i>{{order.priority}}</i></p>
+<p>Date: <i>{{order.date}}</i></p>
+
+<p>
+    <a href="{% url "order_list" %}">Regresar</a>
+</p>

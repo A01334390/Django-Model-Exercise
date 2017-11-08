@@ -1,0 +1,15 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{%bootstrap_javascript%}
+<html>
+    <body>
+<h1>{{ notebook.nType }}</h1>
+
+<p>Tipo: <i>{{ notebook.nType }}</i></p>
+<p>Benefit: <i>{{notebook.benefit}}</i></p>
+
+<p>
+    <a href="{% url "notebook_list" %}">Regresar</a>
+</p>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{%bootstrap_javascript%}
+
+<h1>{{ notebookorder.order.client.firstName }}</h1>
+
+<p>Priority: <i>{{ notebookorder.order.priority }}</i></p>
+<p>Quantity: <i>{{notebookorder.quantity}}</i></p>
+<p>Notebook: <i>{{notebookorder.notebook.nType}}</i></p>
+<p>Status: <i>{{notebookorder.status}}</i></p>
+<p>Page: <i>{{notebookorder.page.description}}</i></p>
+
+
+<p>
+    <a href="{% url "notebookorder_list" %}">Regresar</a>
+</p>
