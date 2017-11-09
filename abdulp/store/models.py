@@ -79,7 +79,7 @@ class NotebookOrder(models.Model):
         max_length = 2,
         default = "NS",
     )
-    page = models.OneToOneField(
+    page = models.ForeignKey(
         Page,
         on_delete=models.DO_NOTHING
     )
