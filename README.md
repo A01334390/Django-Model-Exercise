@@ -1,6 +1,6 @@
 <h1> LiteLuna </h1>
 <p> 
-This is a small POC of the Django Technology to test if Python would suit the Blockchain project better than <b>Node.js</b>
+This is a small POC of the Django Technology
 </p>
 <br>
 <h2>This project needs: </h2>
@@ -8,7 +8,6 @@ This is a small POC of the Django Technology to test if Python would suit the Bl
   <li>A refactoring of models</li>
   <li>An improved templating system</li>
   <li>A better design</li>
-  <li><b>Not</b> to be in Python</li>
 </ul>
 <br>
 <h2>Technologies used: </h2>
